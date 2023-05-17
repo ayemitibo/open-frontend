@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* ngx-toastr styles */
+.toast-container {
+    position: fixed;
+    z-index: 9999;
+  }
+  
+  .toast-top-right {
+    top: 12px;
+    right: 12px;
+  }
+  
+  .toast-error {
+    background-color: #dc3545;
+  }
+  

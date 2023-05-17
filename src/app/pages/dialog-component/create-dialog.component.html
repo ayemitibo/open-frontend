@@ -1,0 +1,33 @@
+<h2 mat-dialog-title *ngIf="data.type == 'create'">Create Product</h2>
+<h2 mat-dialog-title *ngIf="data.type == 'edit'">Edit Product</h2>
+<mat-dialog-content>
+  <form class="m-t-30" [formGroup]="form">
+    <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+      >Name</mat-label
+    >
+    <mat-form-field appearance="outline" class="w-100" color="primary">
+      <input matInput formControlName="name" type="email" />
+    </mat-form-field>
+    <!-- password -->
+    <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+      >Description</mat-label
+    >
+    <mat-form-field appearance="outline" class="w-100" color="primary">
+      <input matInput type="text" formControlName="description" />
+    </mat-form-field>
+
+    <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+    >Amount</mat-label
+  >
+  <mat-form-field appearance="outline" class="w-100" color="primary">
+    <input matInput type="number" formControlName="amount" />
+  </mat-form-field>
+
+    <a (click)="submit()" mat-flat-button color="primary" class="w-100">
+      {{data?.type == 'create' ? 'Create' : 'Edit'}}  
+    </a>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
